@@ -71,23 +71,23 @@
 
 ```mermaid
 graph TD
-    User[사용자] -->|명령: !프로젝트| MainBot[메인 컨트롤러]
+    User["사용자"] -->|명령: !프로젝트| MainBot["메인 컨트롤러"]
     
-    subgraph The_Hive [멀티 페르소나 팀]
-        MainBot --> PM[🕵️ 기획자 AI (검색/기획)]
-        MainBot --> Dev[👨💻 개발자 AI (코딩/Docker)]
-        MainBot --> Sec[🛡️ 보안 AI (취약점 분석)]
+    subgraph The_Hive ["멀티 페르소나 팀"]
+        MainBot --> PM["🕵️ 기획자 AI (검색/기획)"]
+        MainBot --> Dev["👨💻 개발자 AI (코딩/Docker)"]
+        MainBot --> Sec["🛡️ 보안 AI (취약점 분석)"]
         PM <--> Dev <--> Sec
     end
     
-    subgraph Zombie_Core [좀비 모드 엔진]
-        Monitor[로그 감시] -->|에러 감지| Fixer[자동 수정 모듈]
+    subgraph Zombie_Core ["좀비 모드 엔진"]
+        Monitor["로그 감시"] -->|에러 감지| Fixer["자동 수정 모듈"]
         Fixer -->|재배포| Dev
     end
     
-    subgraph Output [최종 산출물]
-        Dev -->|배포| URL[웹사이트 URL]
-        Dev -->|파일| Zip[Project.zip + Diagram README]
+    subgraph Output ["최종 산출물"]
+        Dev -->|배포| URL["웹사이트 URL"]
+        Dev -->|파일| Zip["Project.zip + Diagram README"]
     end
 ```
 
